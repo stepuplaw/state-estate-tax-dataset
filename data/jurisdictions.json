@@ -308,12 +308,12 @@
       "exemption_usd": null,
       "bottom_rate": null,
       "top_rate": null,
-      "citation": "Ark. Code §26-59-106",
+      "citation": "Ark. Code §§26-59-103, 26-59-106(a)",
       "source_url": "https://www.dfa.arkansas.gov/",
-      "special_rule": "Levied a pick-up tax measured by the federal credit under IRC §2011, which terminated for deaths after 2004-12-31. No state death tax applies today. Whether the state statute was repealed or merely computes to zero has not been individually verified.",
+      "special_rule": "Date-frozen sponge with a self-executing sunset. §26-59-106(a) measures the tax by the federal credit \"as in effect on January 1, 2002.\" Because that freeze date is after EGTRRA, the frozen law already contains the phase-out and the §2011(f) termination, so it computes to zero, and §26-59-103 is an express sunset. No repeal year is published: the sunset's enactment year was not read.",
       "status": "sponge_dormant",
       "status_year": null,
-      "status_verified": false,
+      "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
       "exemption_kind": null
@@ -325,12 +325,12 @@
       "exemption_usd": null,
       "bottom_rate": null,
       "top_rate": null,
-      "citation": "A.R.S. §42-4051 (repealed)",
-      "source_url": "https://azdor.gov/",
-      "special_rule": "Levied a pick-up tax measured by the federal credit under IRC §2011, which terminated for deaths after 2004-12-31. No state death tax applies today. Whether the state statute was repealed or merely computes to zero has not been individually verified.",
-      "status": "sponge_dormant",
-      "status_year": null,
-      "status_verified": false,
+      "citation": "A.R.S. tit. 42 ch. 4, repealed by 2006 Ariz. Sess. Laws ch. 262 §3 (S.B. 1170)",
+      "source_url": "https://www.azleg.gov/legtext/47leg/2r/laws/0262.htm",
+      "special_rule": "Repealed outright by S.B. 1170 in 2006 rather than lapsing with the federal credit.",
+      "status": "repealed",
+      "status_year": 2006,
+      "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
       "exemption_kind": null
@@ -342,11 +342,11 @@
       "exemption_usd": null,
       "bottom_rate": null,
       "top_rate": null,
-      "citation": "Cal. Rev. & Tax. Code §§13301, 13302",
-      "source_url": "https://codes.findlaw.com/ca/revenue-and-taxation-code/rtc-sect-13302.html",
-      "special_rule": "Cal. Rev. & Tax. Code §13301 bars a state death tax and §13302 carves out a pick-up tax equal to the maximum federal credit, so the tax computes to zero. These are statutes, not constitutional provisions. A 1982 ballot-initiative origin is sometimes asserted and is NOT verified here.",
-      "status": "sponge_dormant",
-      "status_year": null,
+      "citation": "Cal. Rev. & Tax. Code §§13301, 13302 (Part 8 repealed and added 1982-06-08 by initiative Proposition 6)",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=13301",
+      "special_rule": "Prohibition adopted by ballot initiative, but STATUTORY rather than constitutional. The code itself heads Part 8 \"repealed and added June 8, 1982, by initiative Proposition 6.\" §13301 bars state and local death taxes except the §13302 pick-up carve-out, which computes to zero. Do not code this as a constitutional cap.",
+      "status": "statutory_prohibition_by_initiative",
+      "status_year": 1982,
       "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
@@ -384,7 +384,8 @@
       "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
-      "exemption_kind": null
+      "exemption_kind": null,
+      "enacted_year": 2017
     },
     {
       "code": "FL",
@@ -436,7 +437,8 @@
       "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
-      "exemption_kind": null
+      "exemption_kind": null,
+      "enacted_year": 2021
     },
     {
       "code": "ID",
@@ -445,10 +447,10 @@
       "exemption_usd": null,
       "bottom_rate": null,
       "top_rate": null,
-      "citation": "Idaho Code §14-403",
+      "citation": "Idaho Code tit. 14 ch. 4 [REPEALED]",
       "source_url": "https://tax.idaho.gov/",
-      "special_rule": "Levied a pick-up tax measured by the federal credit under IRC §2011, which terminated for deaths after 2004-12-31. No state death tax applies today. Whether the state statute was repealed or merely computes to zero has not been individually verified.",
-      "status": "sponge_dormant",
+      "special_rule": "Repealed, but NO YEAR IS PUBLISHED HERE. The status was established by bracketing the codifications: title 14 ch. 4 is intact in the 2019 Idaho Code and shows [REPEALED] from 2020 onward. The repealing act was never read because every Idaho state server refused connections. Do not infer a year from this record.",
+      "status": "repealed",
       "status_year": null,
       "status_verified": false,
       "estate_tax_2026": false,
@@ -487,7 +489,8 @@
       "status_verified": false,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
-      "exemption_kind": null
+      "exemption_kind": null,
+      "enacted_year": 2006
     },
     {
       "code": "LA",
@@ -504,7 +507,8 @@
       "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
-      "exemption_kind": null
+      "exemption_kind": null,
+      "enacted_year": 2008
     },
     {
       "code": "MI",
@@ -515,7 +519,7 @@
       "top_rate": null,
       "citation": "MCL §205.201",
       "source_url": "https://www.michigan.gov/taxes",
-      "special_rule": "Levied a pick-up tax measured by the federal credit under IRC §2011, which terminated for deaths after 2004-12-31. No state death tax applies today. Whether the state statute was repealed or merely computes to zero has not been individually verified.",
+      "special_rule": "Dormant pick-up at MCL 205.232. Michigan's separate inheritance tax has been dead for deaths after 1993-09-30 (MCL 205.223(a)).",
       "status": "sponge_dormant",
       "status_year": null,
       "status_verified": false,
@@ -538,7 +542,8 @@
       "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
-      "exemption_kind": null
+      "exemption_kind": null,
+      "enacted_year": 2001
     },
     {
       "code": "MS",
@@ -564,15 +569,16 @@
       "exemption_usd": null,
       "bottom_rate": null,
       "top_rate": null,
-      "citation": "Mont. Code §72-16-904",
+      "citation": "MCA 72-16-301 repealed by Ch. 9, Sp. L. May 2000; MCA 72-16-904, 72-16-905 still live",
       "source_url": "https://mtrevenue.gov/",
-      "special_rule": "Standalone inheritance tax repealed around 2001, before the federal credit terminated. Year not verified.",
-      "status": "repealed",
+      "special_rule": "Inheritance tax repealed by Ch. 9, Special Laws of May 2000, with no application to deaths after 2001-01-01. The separate estate tax at MCA 72-16-904 and 72-16-905 was never repealed and remains a live pick-up computing to zero.",
+      "status": "repealed_and_sponge_dormant",
       "status_year": 2001,
-      "status_verified": false,
+      "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
-      "exemption_kind": null
+      "exemption_kind": null,
+      "enacted_year": 2000
     },
     {
       "code": "NC",
@@ -623,7 +629,8 @@
       "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
-      "exemption_kind": null
+      "exemption_kind": null,
+      "enacted_year": 2002
     },
     {
       "code": "NM",
@@ -649,16 +656,16 @@
       "exemption_usd": null,
       "bottom_rate": null,
       "top_rate": null,
-      "citation": "NRS 375A.100 (pick-up tax measured by the federal credit)",
-      "source_url": "https://codes.findlaw.com/nv/title-32-revenue-and-taxation/nv-rev-st-375a-100.html",
-      "special_rule": "NRS 375A.100 imposes a tax equal to the maximum federal credit for state death taxes, so it computes to zero. A constitutional prohibition is sometimes asserted and is NOT verified here.",
-      "status": "sponge_dormant",
+      "citation": "Nev. Const. Art. 10 §4; NRS ch. 375A",
+      "source_url": "https://tax.nv.gov/faqs/estate-tax-faqs/",
+      "special_rule": "Constitutional cap, structurally parallel to Florida. Nev. Const. Art. 10 §4: \"The legislature may provide by law for the taxation of estates taxed by the United States, but only to the extent of any credit allowed by federal law.\" Ratified at the 1986 general election. NRS ch. 375A implements it as a pick-up and computes to zero. This is a cap on the amount, not a prohibition on the tax.",
+      "status": "constitutional_cap",
       "status_year": null,
       "status_verified": true,
-      "citation_unverified": "Nev. Const. Art. 10 §4 is sometimes cited as a constitutional bar; not verified here.",
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
-      "exemption_kind": null
+      "exemption_kind": null,
+      "enacted_year": 1986
     },
     {
       "code": "OH",
@@ -675,7 +682,8 @@
       "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
-      "exemption_kind": null
+      "exemption_kind": null,
+      "enacted_year": 2011
     },
     {
       "code": "OK",
@@ -686,13 +694,14 @@
       "top_rate": null,
       "citation": "68 O.S. §801 et seq. (repealed)",
       "source_url": "https://oklahoma.gov/tax.html",
-      "special_rule": "Standalone estate tax repealed for deaths after 2009. Year not re-verified against the statute.",
+      "special_rule": "Estate tax repealed effective 2010-01-01, enacted 2006 with a delayed repeal. 68 O.S. §§801-803 and 805-810 were struck, but §804, the additional tax to absorb the federal credit, is still on the books and is vestigial: it cross-references both the repealed §801 et seq. and the repealed IRC §2011.",
       "status": "repealed",
       "status_year": 2010,
       "status_verified": false,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
-      "exemption_kind": null
+      "exemption_kind": null,
+      "enacted_year": 2006
     },
     {
       "code": "SC",
@@ -718,15 +727,16 @@
       "exemption_usd": null,
       "bottom_rate": null,
       "top_rate": null,
-      "citation": "S.D.C.L. ch. 10-40A",
-      "source_url": "https://dor.sd.gov/",
-      "special_rule": "Standalone inheritance tax repealed around 2001, before the federal credit terminated. Year not verified.",
-      "status": "repealed",
+      "citation": "S.D. Const. Art. XI §15; SDCL chs. 10-40, 10-40A repealed by SL 2014 ch. 59",
+      "source_url": "https://sdlegislature.gov/Constitution/11",
+      "special_rule": "Constitutional prohibition, not a dormant pick-up. S.D. Const. Art. XI §15: \"No tax may be levied on any inheritance, and the Legislature may not enact any law imposing such a tax.\" Adopted by initiated measure approved 2000-11-07, effective 2001-07-01. Unlike Florida and Nevada this is a flat ban rather than a cap. The code sections were not struck until SL 2014 ch. 59. South Dakota also repealed its estate tax outright, so it is not a sponge state at all.",
+      "status": "constitutional_prohibition",
       "status_year": 2001,
-      "status_verified": false,
+      "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
-      "exemption_kind": null
+      "exemption_kind": null,
+      "enacted_year": 2000
     },
     {
       "code": "TN",
@@ -743,7 +753,8 @@
       "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
-      "exemption_kind": null
+      "exemption_kind": null,
+      "enacted_year": 2012
     },
     {
       "code": "TX",
@@ -752,11 +763,11 @@
       "exemption_usd": null,
       "bottom_rate": null,
       "top_rate": null,
-      "citation": "Tex. Tax Code ch. 211 (repealed)",
+      "citation": "Tex. Const. art. VIII §26 (Prop. 8, approved 2025-11-04); former Tex. Tax Code ch. 211 repealed",
       "source_url": "https://comptroller.texas.gov/",
-      "special_rule": "Levied a pick-up tax measured by the federal credit under IRC §2011, which terminated for deaths after 2004-12-31. No state death tax applies today. Whether the state statute was repealed or merely computes to zero has not been individually verified.",
-      "status": "sponge_dormant",
-      "status_year": null,
+      "special_rule": "Texas added a constitutional prohibition at art. VIII §26, approved by voters 2025-11-04, on top of the earlier repeal of Tax Code ch. 211. NOT VERIFIED from a Texas source: every texas.gov and state.tx.us host failed DNS resolution during verification, including through public resolvers, so this rests on a secondary source and needs a re-pull before being relied on. Note also that the former pick-up tax was statutorily titled an inheritance tax, which invites miscoding.",
+      "status": "constitutional_prohibition",
+      "status_year": 2025,
       "status_verified": false,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
@@ -769,7 +780,7 @@
       "exemption_usd": null,
       "bottom_rate": null,
       "top_rate": null,
-      "citation": "Utah Code Title 59 ch. 11 (repealed 2026-05-06)",
+      "citation": "Utah Code §§59-11-101 to 59-11-115, repealed by Laws of Utah 2026 ch. 299 (H.B. 77) §27",
       "source_url": "https://tax.utah.gov/",
       "special_rule": "Repealed during the reporting year. Deaths 2026-01-01 through 2026-05-05 fell under a codified pick-up statute that computed to zero; deaths on or after 2026-05-06 fall under no statute at all. No tax was payable either way.",
       "status": "repealed",
@@ -786,15 +797,16 @@
       "exemption_usd": null,
       "bottom_rate": null,
       "top_rate": null,
-      "citation": "Va. Code §58.1-902 (still codified)",
-      "source_url": "https://www.tax.virginia.gov/",
-      "special_rule": "No tax is payable. Va. Code §58.1-902 still imposes \"a tax in the amount of the federal credit\" and chapter 9 remains codified, so this is a dormant pick-up rather than a clean repeal. An earlier characterisation of a 2007 repeal is withdrawn.",
-      "status": "sponge_dormant",
+      "citation": "Va. Code §§58.1-900 to 58.1-938 (all live); 2006 Acts Sp. Sess. I ch. 5 (S.B. 5019)",
+      "source_url": "https://law.lis.virginia.gov/vacode/title58.1/chapter9/section58.1-902/",
+      "special_rule": "Not a clean repeal, and not entirely untaxed. Va. Code §58.1-902(A) still imposes \"a tax in the amount of the federal credit\" and the whole chapter is live. Virginia was date-frozen to the credit as it existed 1978-01-01, which is why it kept collecting through 2006; 2006 S.B. 5019 un-froze it to current law, zeroing it. The Tax Commissioner's ruling PD 15-93 says the tax was only \"effectively repealed\" and that if Congress reinstates the federal credit, certain remainder interests would again be taxable. Virginia ALSO still imposes a postponed inheritance tax on pre-1980 remainder interests, and PD 15-93 orders a taxpayer to pay it. Virginia's own sources disagree on the date (PD 15-93 says effective 2007-01-01; tax.virginia.gov says prior to 2007-07-01), so no date is published here.",
+      "status": "sponge_dormant_with_residual_tax",
       "status_year": null,
       "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
-      "exemption_kind": null
+      "exemption_kind": null,
+      "residual_tax": "Postponed inheritance tax on pre-1980 remainder interests remains collectible."
     },
     {
       "code": "WI",
@@ -820,12 +832,12 @@
       "exemption_usd": null,
       "bottom_rate": null,
       "top_rate": null,
-      "citation": "W. Va. Code §11-11-3",
+      "citation": "W. Va. Code §§11-11-2, 11-11-3, 11-11-4",
       "source_url": "https://tax.wv.gov/",
-      "special_rule": "Levied a pick-up tax measured by the federal credit under IRC §2011, which terminated for deaths after 2004-12-31. No state death tax applies today. Whether the state statute was repealed or merely computes to zero has not been individually verified.",
+      "special_rule": "Date-frozen sponge, and the freeze date is the risk. §11-11-2 defines the IRC as in effect on 1985-01-01, and a 1985-frozen §2011 carries the full pre-EGTRRA credit table. It is saved by the clause pulling in later similar or replacement changes together with the \"if any\" wording in §11-11-3, but that is an interpretive step rather than a clean floating reference. Contrast Arkansas, whose 2002 freeze date already includes the phase-out.",
       "status": "sponge_dormant",
       "status_year": null,
-      "status_verified": false,
+      "status_verified": true,
       "estate_tax_2026": false,
       "inheritance_tax_2026": false,
       "exemption_kind": null
@@ -839,7 +851,7 @@
       "top_rate": null,
       "citation": "Wyo. Stat. §39-19-103",
       "source_url": "https://revenue.wyo.gov/",
-      "special_rule": "Levied a pick-up tax measured by the federal credit under IRC §2011, which terminated for deaths after 2004-12-31. No state death tax applies today. Whether the state statute was repealed or merely computes to zero has not been individually verified.",
+      "special_rule": "Dormant pick-up. Wyoming has NO constitutional death-tax provision; all twenty sections of article 15 were checked and none bars such a tax.",
       "status": "sponge_dormant",
       "status_year": null,
       "status_verified": false,
@@ -935,6 +947,14 @@
     {
       "issue": "A commonly cited year may be an enactment date, an effective date, or a liability-cessation date",
       "detail": "Louisiana has three: liability ceased for deaths after 2004-06-30, the repeal was enacted in 2008, and it took effect 2010-01-01. Wisconsin's cited 2008 is neither an enactment nor a repeal but a statutory definition boundary. Where these diverge, status_year records the repeal's effective date and special_rule records the rest."
+    },
+    {
+      "issue": "Enactment year vs effective year vs liability-cessation year",
+      "detail": "status_year records the EFFECTIVE date. enacted_year records when the legislature acted. They differ by one to four years in Tennessee (2012/2016), Iowa (2021/2025), Ohio (2011/2013), Delaware (2017/2018), Kansas and Oklahoma (2006/2010). Published summaries routinely print one and label it the other."
+    },
+    {
+      "issue": "Date-frozen federal credit references",
+      "detail": "Arkansas freezes the federal credit as of 2002-01-01 and West Virginia as of 1985-01-01. The Arkansas freeze post-dates EGTRRA so the frozen law already zeroes out. The West Virginia freeze pre-dates it and carries the full pre-EGTRRA credit table, relying on replacement-reference language to reach zero. That is an interpretive step, not a mechanical one."
     }
   ],
   "jurisdictions_note_wa": "See estate_tax_brackets.json keys WA and WA_2026H1.",
