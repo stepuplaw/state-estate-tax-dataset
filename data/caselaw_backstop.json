@@ -1,0 +1,195 @@
+{
+  "method": "FTS5 over CourtListener national corpus, 10.8M opinions",
+  "caveat": "Secondary corroboration only. A case shows what a court believed the law to be; cite the statute, not the case.",
+  "results": {
+    "AK": {
+      "broad": 25,
+      "narrow": 14,
+      "top": [
+        {
+          "case": "Hunt v. Hunt",
+          "date": "1985-04-19",
+          "cites": 50
+        },
+        {
+          "case": "Gefre v. Davis Wright Tremaine, LLP",
+          "date": "2013-08-02",
+          "cites": 44
+        },
+        {
+          "case": "Thomas v. Cleary",
+          "date": "1989-01-27",
+          "cites": 39
+        }
+      ]
+    },
+    "AL": {
+      "broad": 123,
+      "narrow": 37,
+      "top": [
+        {
+          "case": "Banks v. State",
+          "date": "1921-06-30",
+          "cites": 67
+        },
+        {
+          "case": "White v. Reynolds Metals Co.",
+          "date": "1989-12-21",
+          "cites": 62
+        },
+        {
+          "case": "Belcher v. Birmingham Trust National Bank",
+          "date": "1968-05-01",
+          "cites": 42
+        }
+      ]
+    },
+    "CO": {
+      "broad": 227,
+      "narrow": 44,
+      "top": [
+        {
+          "case": "Colorado Department of Social Services v. Board of County Commissioners",
+          "date": "1985-03-11",
+          "cites": 44
+        },
+        {
+          "case": "Colo. Dept. of Soc. Serv. v. BD. OF CTY. COM'RS",
+          "date": "1985-04-01",
+          "cites": 36
+        },
+        {
+          "case": "Winslow Construction Co. v. City & County of Denver",
+          "date": "1998-06-22",
+          "cites": 25
+        }
+      ]
+    },
+    "ID": {
+      "broad": 50,
+      "narrow": 9,
+      "top": [
+        {
+          "case": "J. C. Penney Co. v. Diefendorf",
+          "date": "1934-04-28",
+          "cites": 31
+        },
+        {
+          "case": "Swope v. Swope",
+          "date": "1987-03-31",
+          "cites": 27
+        },
+        {
+          "case": "Estate of Stahl v. Idaho State Tax Commission",
+          "date": "2017-08-24",
+          "cites": 20
+        }
+      ]
+    },
+    "KS": {
+      "broad": 242,
+      "narrow": 65,
+      "top": [
+        {
+          "case": "Wheeler v. Weightman",
+          "date": "1915-06-29",
+          "cites": 62
+        },
+        {
+          "case": "Olathe Hospital Foundation, Inc. v. Extendicare, Inc.",
+          "date": "1975-07-17",
+          "cites": 50
+        },
+        {
+          "case": "Jennings v. Murdock",
+          "date": "1976-07-16",
+          "cites": 36
+        }
+      ]
+    },
+    "MI": {
+      "broad": 264,
+      "narrow": 80,
+      "top": [
+        {
+          "case": "Wikman v. City of Novi",
+          "date": "1982-07-02",
+          "cites": 119
+        },
+        {
+          "case": "CAF Investment Co. v. Saginaw Township",
+          "date": "1981-02-24",
+          "cites": 90
+        },
+        {
+          "case": "Michigan Bell Telephone Co. v. Department of Treasury",
+          "date": "1994-06-21",
+          "cites": 70
+        }
+      ]
+    },
+    "OK": {
+      "broad": 231,
+      "narrow": 68,
+      "top": [
+        {
+          "case": "Bartlett v. American National Bank & Trust Co. of Sapulpa",
+          "date": "1984-05-11",
+          "cites": 138
+        },
+        {
+          "case": "State Ex Rel. Oklahoma Bar Association v. Besley",
+          "date": "2006-03-28",
+          "cites": 78
+        },
+        {
+          "case": "State Ex Rel. Oklahoma Bar Ass'n v. Albert",
+          "date": "2007-05-15",
+          "cites": 73
+        }
+      ]
+    },
+    "TX": {
+      "broad": 634,
+      "narrow": 190,
+      "top": [
+        {
+          "case": "Frost National Bank v. Fernandez",
+          "date": "2010-04-16",
+          "cites": 766
+        },
+        {
+          "case": "Vinson & Elkins v. Moran",
+          "date": "1997-06-12",
+          "cites": 188
+        },
+        {
+          "case": "Hilley v. Hilley",
+          "date": "1961-01-25",
+          "cites": 140
+        }
+      ]
+    },
+    "WY": {
+      "broad": 71,
+      "narrow": 26,
+      "top": [
+        {
+          "case": "Chevron U.S.A., Inc. v. Department of Revenue",
+          "date": "2007-03-14",
+          "cites": 37
+        },
+        {
+          "case": "Tamra Acorn, Rebecca Shwen, and Federer Holding Company, LLC, a Wyoming close limited liability company v. Lori Moncecchi and Dino Moncecchi",
+          "date": "2016-12-22",
+          "cites": 27
+        },
+        {
+          "case": "Brooks v. Zebre",
+          "date": "1990-05-17",
+          "cites": 27
+        }
+      ]
+    }
+  }
+}
