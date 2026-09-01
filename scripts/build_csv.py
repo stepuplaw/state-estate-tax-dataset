@@ -23,13 +23,19 @@ brack = json.loads((DATA / "estate_tax_brackets.json").read_text())
 with (DATA / "jurisdictions.csv").open("w", newline="") as f:
     w = csv.writer(f)
     w.writerow([
-        "code", "name", "tax_type", "exemption_usd", "bottom_rate", "top_rate",
+        "code", "name", "tax_type", "estate_tax_2026", "inheritance_tax_2026",
+        "status", "status_year", "status_verified",
+        "exemption_usd", "exemption_kind", "bottom_rate", "top_rate",
         "citation", "source_url", "special_rule", "tax_year", "retrieved",
     ])
     for j in juris["jurisdictions"]:
         w.writerow([
-            j["code"], j["name"], j["tax_type"], j["exemption_usd"],
-            j["bottom_rate"], j["top_rate"], j["citation"], j["source_url"],
+            j["code"], j["name"], j["tax_type"],
+            j["estate_tax_2026"], j["inheritance_tax_2026"],
+            j.get("status", "levies_tax"), j.get("status_year", "") or "",
+            "" if j.get("status_verified") is None else j["status_verified"],
+            j["exemption_usd"], j.get("exemption_kind") or "", j["bottom_rate"], j["top_rate"],
+            j["citation"], j["source_url"],
             j["special_rule"] or "", juris["tax_year"], juris["retrieved"],
         ])
 

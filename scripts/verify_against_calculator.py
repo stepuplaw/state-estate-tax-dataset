@@ -54,7 +54,7 @@ def dataset_tax(code, taxable_estate, tables):
     spec = tables[code]
     if spec.get("band_style"):
         return from_bands(taxable_estate, spec["bands"])
-    ex = juris[code]["exemption_usd"] or 0
+    ex = 3_076_000 if code == "WA_2026H1" else (juris[code]["exemption_usd"] or 0)
     applies = spec["applies_to"]
     amount = taxable_estate if applies.startswith("the whole") else taxable_estate - ex
     tax = from_rows(amount, spec["rows"])
@@ -69,6 +69,8 @@ def dataset_tax(code, taxable_estate, tables):
 # statute descriptions rather than copied from the JSON, so agreement means
 # something.
 REFERENCE = {
+    # Washington's first-half-2026 schedule under SB 5813, exclusion $3,076,000.
+    "WA_2026H1": lambda v: from_rows(v - 3_076_000, [[0,0,.10],[1_000_000,100_000,.15],[2_000_000,250_000,.17],[3_000_000,420_000,.19],[4_000_000,610_000,.23],[6_000_000,1_070_000,.26],[7_000_000,1_330_000,.30],[9_000_000,1_930_000,.35]]),
     "WA": lambda v: from_rows(v - 3_000_000, [[0,0,.10],[1_000_000,100_000,.14],[2_000_000,240_000,.15],[3_000_000,390_000,.16],[4_000_000,550_000,.18],[6_000_000,910_000,.19],[7_000_000,1_100_000,.195],[9_000_000,1_490_000,.20]]),
     "OR": lambda v: 0.0 if v < 1_000_000 else from_rows(v, [[1_000_000,0,.10],[1_500_000,50_000,.1025],[2_500_000,152_500,.105],[3_500_000,257_500,.11],[4_500_000,367_500,.115],[5_500_000,482_500,.12],[6_500_000,602_500,.13],[7_500_000,732_500,.14],[8_500_000,872_500,.15],[9_500_000,1_022_500,.16]]),
     "MN": lambda v: from_rows(v - 3_000_000, [[0,0,.13],[7_100_000,923_000,.136],[8_100_000,1_059_000,.144],[9_100_000,1_203_000,.152],[10_100_000,1_355_000,.16]]),
