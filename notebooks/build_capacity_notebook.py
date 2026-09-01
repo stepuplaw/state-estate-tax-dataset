@@ -51,24 +51,30 @@ an SQLite FTS5 index. A *cluster* is one decision, which may contain a majority
 opinion plus concurrences and dissents; counting clusters rather than opinions
 avoids counting one decision several times.
 
-Reproducing this from scratch needs the bulk corpus. The derived counts this
-notebook produces are written to CSV alongside it, so the results are reusable
-without it.
+Queries go through `clcorpus`, the shared corpus library, rather than opening
+the database directly. That is not a style preference: the library owns the
+court-scope definitions, the `?immutable=1` open, and the block decoder, each of
+which is easy to get subtly wrong. Its `fl` scope also resolves to a local SSD
+slice, so the same query that takes seconds against the full corpus returns
+almost instantly.
+
+Reproducing this from scratch needs the corpus. The derived counts this notebook
+produces are written to CSV alongside it, so the results are reusable without
+it.
 """)
 
 code('''
 import collections
 import pathlib
-import sqlite3
+import sys
 
 import matplotlib.pyplot as plt
 import pandas as pd
 
-OPS = "/Volumes/Elements/cl-data/us-opinions.db"
-META = "/Volumes/Elements/cl-data/us-meta.db"
+sys.path.insert(0, str(pathlib.Path.home() / "caselaw"))
+import clcorpus as cc  # noqa: E402  the shared corpus library
 
-db = sqlite3.connect(f"file:{OPS}?immutable=1", uri=True)
-db.execute(f"ATTACH DATABASE 'file:{META}?immutable=1' AS m")
+db, info = cc.connect(scope="fl", quiet=True)
 
 # Florida STATE appellate courts only: the District Courts of Appeal and the
 # Supreme Court of Florida. Federal courts sitting in Florida are excluded on
@@ -77,7 +83,9 @@ db.execute(f"ATTACH DATABASE 'file:{META}?immutable=1' AS m")
 # manufacture a decline that is really a change in corpus composition.
 COURTS = ["fladistctapp", "fla"]
 qm = ",".join("?" * len(COURTS))
-print(db.execute("SELECT v FROM meta WHERE k='snapshot'").fetchone()[0])
+snapshot = db.execute("SELECT v FROM meta WHERE k='source_snapshot'").fetchone()[0]
+print(f"corpus:   {info['ops']}")
+print(f"snapshot: {snapshot}")
 ''')
 
 md("""
@@ -100,13 +108,15 @@ QUERIES = {
 }
 
 def clusters(query):
+    """Opinion ids from the FTS index, resolved to decisions in our two courts."""
+    ids = cc.fts_ids(db, query)
+    q = ",".join("?" * len(ids))
     rows = db.execute(
         f"""SELECT DISTINCT o.cluster_id
-            FROM op_fts f
-            JOIN opinions o ON o.id = f.rowid
+            FROM opinions o
             JOIN cluster_court cc ON cc.cluster_id = o.cluster_id
-            WHERE op_fts MATCH ? AND cc.court IN ({qm})""",
-        (query, *COURTS),
+            WHERE o.id IN ({q}) AND cc.court IN ({qm})""",
+        (*ids, *COURTS),
     ).fetchall()
     return {r[0] for r in rows}
 
@@ -137,7 +147,7 @@ def by_year(cluster_ids=None):
     if cluster_ids is None:
         rows = db.execute(
             f"""SELECT cm.date_filed FROM cluster_court cc
-                JOIN m.cluster_meta cm ON cm.cluster_id = cc.cluster_id
+                JOIN cluster_meta cm ON cm.cluster_id = cc.cluster_id
                 WHERE cc.court IN ({qm}) AND cm.date_filed IS NOT NULL""",
             COURTS,
         )
@@ -145,7 +155,7 @@ def by_year(cluster_ids=None):
         ids = list(cluster_ids)
         q2 = ",".join("?" * len(ids))
         rows = db.execute(
-            f"SELECT date_filed FROM m.cluster_meta WHERE cluster_id IN ({q2}) "
+            f"SELECT date_filed FROM cluster_meta WHERE cluster_id IN ({q2}) "
             "AND date_filed IS NOT NULL", ids,
         )
     for (d,) in rows:

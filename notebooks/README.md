@@ -40,6 +40,14 @@ the same bias applies to every decade equally.
 
 ## Data
 
+**Query through `~/caselaw/`, never by opening the corpus directly.** That
+directory is the one pipeline shared by `elder/`, `stepuplaw/` and `beastmode/`,
+and it owns the court-scope definitions, the `?immutable=1` open and the block
+decoder — each of which has been gotten wrong before. Use `clsearch.py`,
+`clsweep.py`, `clpull.py`, or `import clcorpus`. Its `fl` scope also resolves to
+a local SSD slice, so a query that takes seconds against the full platter corpus
+returns almost instantly.
+
 CourtListener bulk corpus, snapshot 2026-06-30: 10,797,793 opinions across
 10,070,727 clusters, stored locally with an SQLite FTS5 index. Counting is by
 cluster rather than opinion, so one decision with a majority plus a dissent
