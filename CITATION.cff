@@ -5,7 +5,7 @@ type: dataset
 authors:
   - family-names: Klagge
     given-names: Kevin D.
-    affiliation: "Klagge Law, PLLC (StepUp Law)"
+    affiliation: "Klagge Law, PLLC (StepUpLaw)"
     # Replace with the real iD from orcid.org/register BEFORE tagging a release.
     # Without it the DataCite record carries a bare name string that no index can
     # resolve to a person, and that is baked into the DOI for that version.
