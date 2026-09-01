@@ -1,0 +1,112 @@
+{
+  "tax_year": 2026,
+  "retrieved": "2026-07-11",
+  "schema": {
+    "bracket_floor_usd": "Lower bound of the bracket, measured on the amount the state applies its table to (see applies_to).",
+    "base_tax_usd": "Tax on everything below bracket_floor_usd.",
+    "marginal_rate": "Rate applied to the excess over bracket_floor_usd.",
+    "formula": "tax = base_tax_usd + marginal_rate * (amount - bracket_floor_usd)"
+  },
+  "note": "States computing tax from the former federal state death tax credit table (Massachusetts, Rhode Island) are not bracket tables and are excluded here; see jurisdictions.json special_rule. Illinois uses an interrelated calculation and is likewise excluded.",
+  "brackets": {
+    "WA": {
+      "applies_to": "taxable estate minus the $3,000,000 exclusion",
+      "rows": [
+        [0, 0, 0.10], [1000000, 100000, 0.14], [2000000, 240000, 0.15],
+        [3000000, 390000, 0.16], [4000000, 550000, 0.18], [6000000, 910000, 0.19],
+        [7000000, 1100000, 0.195], [9000000, 1490000, 0.20]
+      ]
+    },
+    "OR": {
+      "applies_to": "the whole taxable estate, once it reaches $1,000,000",
+      "rows": [
+        [1000000, 0, 0.10], [1500000, 50000, 0.1025], [2500000, 152500, 0.105],
+        [3500000, 257500, 0.11], [4500000, 367500, 0.115], [5500000, 482500, 0.12],
+        [6500000, 602500, 0.13], [7500000, 732500, 0.14], [8500000, 872500, 0.15],
+        [9500000, 1022500, 0.16]
+      ]
+    },
+    "MN": {
+      "applies_to": "taxable estate minus the $3,000,000 exemption",
+      "rows": [
+        [0, 0, 0.13], [7100000, 923000, 0.136], [8100000, 1059000, 0.144],
+        [9100000, 1203000, 0.152], [10100000, 1355000, 0.16]
+      ]
+    },
+    "NY": {
+      "applies_to": "the whole taxable estate; see the cliff rule in jurisdictions.json",
+      "rows": [
+        [0, 0, 0.0306], [500000, 15300, 0.05], [1000000, 40300, 0.055],
+        [1500000, 67800, 0.065], [2100000, 106800, 0.08], [2600000, 146800, 0.088],
+        [3100000, 190800, 0.096], [3600000, 238800, 0.104], [4100000, 290800, 0.112],
+        [5100000, 402800, 0.12], [6100000, 522800, 0.128], [7100000, 650800, 0.136],
+        [8100000, 786800, 0.144], [9100000, 930800, 0.152], [10100000, 1082800, 0.16]
+      ]
+    },
+    "HI": {
+      "applies_to": "taxable estate minus the $5,490,000 exemption",
+      "rows": [
+        [0, 0, 0.10], [1000000, 100000, 0.11], [2000000, 210000, 0.12],
+        [3000000, 330000, 0.13], [4000000, 460000, 0.14], [5000000, 600000, 0.157],
+        [10000000, 1385000, 0.20]
+      ]
+    },
+    "ME": {
+      "applies_to": "taxable estate minus the $7,160,000 exemption",
+      "rows": [[0, 0, 0.08], [3000000, 240000, 0.10], [6000000, 540000, 0.12]]
+    },
+    "DC": {
+      "applies_to": "the whole taxable estate, taxed in bands above the $4,988,400 zero bracket",
+      "band_style": true,
+      "bands": [
+        [4988400, 5000000, 0.112], [5000000, 6000000, 0.12], [6000000, 7000000, 0.128],
+        [7000000, 8000000, 0.136], [8000000, 9000000, 0.144], [9000000, 10000000, 0.152],
+        [10000000, null, 0.16]
+      ]
+    },
+    "VT": {
+      "applies_to": "taxable estate minus the $5,000,000 exemption",
+      "rows": [[0, 0, 0.16]]
+    },
+    "CT": {
+      "applies_to": "taxable estate minus the $15,000,000 exemption, tax capped at $15,000,000",
+      "rows": [[0, 0, 0.12]]
+    },
+    "MD": {
+      "applies_to": "taxable estate minus the $5,000,000 exemption (estate tax component only)",
+      "rows": [[0, 0, 0.16]]
+    }
+  },
+  "inheritance_classes": {
+    "PA": [
+      { "class": "spouse", "exemption_usd": 0, "rate": 0.0 },
+      { "class": "child_or_parent", "exemption_usd": 0, "rate": 0.045 },
+      { "class": "sibling", "exemption_usd": 0, "rate": 0.12 },
+      { "class": "other", "exemption_usd": 0, "rate": 0.15 }
+    ],
+    "NJ": [
+      { "class": "class_a_spouse_child_grandchild_parent", "exemption_usd": null, "rate": 0.0 },
+      { "class": "class_c_sibling_or_child_in_law", "exemption_usd": 25000,
+        "graduated": [[1075000, 0.11], [300000, 0.13], [300000, 0.14], [null, 0.16]] },
+      { "class": "class_d_other", "exemption_usd": 0,
+        "graduated": [[700000, 0.15], [null, 0.16]] }
+    ],
+    "KY": [
+      { "class": "class_a_close_family", "exemption_usd": null, "rate": 0.0 },
+      { "class": "class_c_unrelated", "exemption_usd": 500,
+        "rows": [[0, 0, 0.06], [10000, 600, 0.08], [20000, 1400, 0.10],
+                 [30000, 2400, 0.12], [45000, 4200, 0.14], [60000, 6300, 0.16]] }
+    ],
+    "NE": [
+      { "class": "spouse", "exemption_usd": null, "rate": 0.0 },
+      { "class": "close_relative", "exemption_usd": 100000, "rate": 0.01 },
+      { "class": "remote_relative", "exemption_usd": 40000, "rate": 0.11 },
+      { "class": "other", "exemption_usd": 25000, "rate": 0.15 }
+    ],
+    "MD": [
+      { "class": "close_family", "exemption_usd": null, "rate": 0.0 },
+      { "class": "other", "exemption_usd": 0, "rate": 0.10,
+        "note": "Credited against the Maryland estate tax." }
+    ]
+  }
+}

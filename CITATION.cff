@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: "US state estate and inheritance tax, 2026"
+message: "If you use this dataset, please cite it."
+type: dataset
+authors:
+  - family-names: Klagge
+    given-names: Kevin D.
+    affiliation: "Klagge Law, PLLC (StepUp Law)"
+license: CC-BY-4.0
+url: "https://stepuplaw.com/data/state-estate-tax"
+repository-code: "https://github.com/stepuplaw/state-estate-tax-dataset"
+keywords:
+  - estate tax
+  - inheritance tax
+  - state tax
+  - estate planning
+  - United States

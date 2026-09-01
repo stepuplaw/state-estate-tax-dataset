@@ -1,0 +1,120 @@
+{
+  "tax_year": 2026,
+  "retrieved": "2026-07-11",
+  "note": "Figures verified against each state's department of revenue or statute on the retrieved date. Washington is stated under its permanent law for deaths on or after 2026-07-01 (ESB 6347); see wa_first_half_2026 for the earlier regime. Iowa repealed its inheritance tax for deaths after 2024 (S.F. 619) and is therefore absent.",
+  "wa_first_half_2026": {
+    "exclusion_usd": 3076000,
+    "top_rate": 0.35,
+    "note": "Deaths on or after 2026-01-01 and before 2026-07-01."
+  },
+  "federal": {
+    "basic_exclusion_usd": 15000000,
+    "citation": "IRC §2010(c)",
+    "source_url": "https://www.law.cornell.edu/uscode/text/26/2010"
+  },
+  "jurisdictions": [
+    {
+      "code": "WA", "name": "Washington", "tax_type": "estate",
+      "exemption_usd": 3000000, "bottom_rate": 0.10, "top_rate": 0.20,
+      "citation": "RCW ch. 83.100; ESB 6347 (2026)",
+      "source_url": "https://dor.wa.gov/taxes-rates/other-taxes/estate-tax-tables",
+      "special_rule": "Deaths before 2026-07-01 use a $3,076,000 exclusion and rates up to 35%."
+    },
+    {
+      "code": "OR", "name": "Oregon", "tax_type": "estate",
+      "exemption_usd": 1000000, "bottom_rate": 0.10, "top_rate": 0.16,
+      "citation": "ORS 118.010", "source_url": "https://www.oregonlegislature.gov/bills_laws/ors/ors118.html",
+      "special_rule": "Lowest threshold in the country. Tax is computed on the whole taxable estate once the $1,000,000 threshold is crossed."
+    },
+    {
+      "code": "MN", "name": "Minnesota", "tax_type": "estate",
+      "exemption_usd": 3000000, "bottom_rate": 0.13, "top_rate": 0.16,
+      "citation": "Minn. Stat. §§291.016, 291.03", "source_url": "https://www.revisor.mn.gov/statutes/cite/291.03",
+      "special_rule": null
+    },
+    {
+      "code": "IL", "name": "Illinois", "tax_type": "estate",
+      "exemption_usd": 4000000, "bottom_rate": null, "top_rate": null,
+      "citation": "35 ILCS 405/2", "source_url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2624",
+      "special_rule": "Interrelated calculation under the Attorney General's instructions rather than a simple bracket table. Effective marginal rate just above the threshold is roughly 28%."
+    },
+    {
+      "code": "MA", "name": "Massachusetts", "tax_type": "estate",
+      "exemption_usd": 2000000, "bottom_rate": null, "top_rate": 0.16,
+      "citation": "G.L. c. 65C §2A", "source_url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter65C/Section2A",
+      "special_rule": "Computed from the former federal state death tax credit table (Table A) less a $99,600 credit, which produces the $2,000,000 effective exemption."
+    },
+    {
+      "code": "RI", "name": "Rhode Island", "tax_type": "estate",
+      "exemption_usd": 1838056, "bottom_rate": null, "top_rate": 0.16,
+      "citation": "RI Div. of Taxation ADV 2025-27", "source_url": "https://tax.ri.gov/",
+      "special_rule": "Computed from the former federal credit table (Table A) less an $87,940 credit. Exemption is inflation adjusted annually."
+    },
+    {
+      "code": "NY", "name": "New York", "tax_type": "estate",
+      "exemption_usd": 7350000, "bottom_rate": 0.0306, "top_rate": 0.16,
+      "citation": "N.Y. Tax Law §952; Form ET-706-I", "source_url": "https://www.tax.ny.gov/pdf/current_forms/et/et706i.pdf",
+      "special_rule": "Cliff. The exemption phases out completely once the estate exceeds 105% of the threshold ($7,717,500), and above that point the entire estate is taxed from the first dollar."
+    },
+    {
+      "code": "CT", "name": "Connecticut", "tax_type": "estate",
+      "exemption_usd": 15000000, "bottom_rate": 0.12, "top_rate": 0.12,
+      "citation": "Conn. Gen. Stat. §12-391", "source_url": "https://www.cga.ct.gov/current/pub/chap_217.htm",
+      "special_rule": "Exemption matches the federal basic exclusion. Flat 12%, with total tax capped at $15,000,000. Connecticut is the only state that also levies its own gift tax."
+    },
+    {
+      "code": "VT", "name": "Vermont", "tax_type": "estate",
+      "exemption_usd": 5000000, "bottom_rate": 0.16, "top_rate": 0.16,
+      "citation": "32 V.S.A. §7442a", "source_url": "https://legislature.vermont.gov/statutes/section/32/190/07442a",
+      "special_rule": "Flat 16% on the excess over the exemption."
+    },
+    {
+      "code": "HI", "name": "Hawaii", "tax_type": "estate",
+      "exemption_usd": 5490000, "bottom_rate": 0.10, "top_rate": 0.20,
+      "citation": "HRS ch. 236E; Form M-6", "source_url": "https://files.hawaii.gov/tax/forms/2024/m6.pdf",
+      "special_rule": null
+    },
+    {
+      "code": "ME", "name": "Maine", "tax_type": "estate",
+      "exemption_usd": 7160000, "bottom_rate": 0.08, "top_rate": 0.12,
+      "citation": "36 M.R.S. ch. 577", "source_url": "https://legislature.maine.gov/statutes/36/title36ch577sec0.html",
+      "special_rule": null
+    },
+    {
+      "code": "DC", "name": "District of Columbia", "tax_type": "estate",
+      "exemption_usd": 4988400, "bottom_rate": 0.112, "top_rate": 0.16,
+      "citation": "D.C. Code §47-3702", "source_url": "https://code.dccouncil.gov/us/dc/council/code/sections/47-3702",
+      "special_rule": "Zero bracket amount is inflation adjusted annually."
+    },
+    {
+      "code": "MD", "name": "Maryland", "tax_type": "both",
+      "exemption_usd": 5000000, "bottom_rate": 0.16, "top_rate": 0.16,
+      "citation": "Md. Tax-Gen. §§7-203, 7-309", "source_url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gtg&section=7-309",
+      "special_rule": "Only jurisdiction with both taxes. 16% estate tax above $5,000,000 plus a 10% inheritance tax on heirs outside close family. The two are credited against each other."
+    },
+    {
+      "code": "PA", "name": "Pennsylvania", "tax_type": "inheritance",
+      "exemption_usd": 0, "bottom_rate": 0.045, "top_rate": 0.15,
+      "citation": "72 P.S. §9116", "source_url": "https://www.revenue.pa.gov/TaxTypes/InheritanceTax/",
+      "special_rule": "Taxed from the first dollar with no exemption. Spouses 0%, children and parents 4.5%, siblings 12%, all others 15%."
+    },
+    {
+      "code": "NJ", "name": "New Jersey", "tax_type": "inheritance",
+      "exemption_usd": 25000, "bottom_rate": 0.11, "top_rate": 0.16,
+      "citation": "N.J.S.A. 54:34-1 et seq.", "source_url": "https://www.nj.gov/treasury/taxation/inheritance-estate/inheritance.shtml",
+      "special_rule": "Class A (spouse, children, grandchildren, parents) fully exempt. Class C (siblings, children-in-law) 11% to 16% over a $25,000 allowance. Class D (everyone else) 15% to 16% from the first dollar."
+    },
+    {
+      "code": "KY", "name": "Kentucky", "tax_type": "inheritance",
+      "exemption_usd": 500, "bottom_rate": 0.04, "top_rate": 0.16,
+      "citation": "KRS 140.070, 140.080", "source_url": "https://apps.legislature.ky.gov/law/statutes/chapter.aspx?id=38267",
+      "special_rule": "Class A (spouse, children, grandchildren, parents, siblings) fully exempt. Class B (nieces, nephews) 4% to 16% over $1,000. Class C (unrelated) 6% to 16% over $500."
+    },
+    {
+      "code": "NE", "name": "Nebraska", "tax_type": "inheritance",
+      "exemption_usd": 100000, "bottom_rate": 0.01, "top_rate": 0.15,
+      "citation": "Neb. Rev. Stat. §§77-2004 to 77-2006", "source_url": "https://nebraskalegislature.gov/laws/statutes.php?statute=77-2004",
+      "special_rule": "Levied at county level per beneficiary. Close relatives 1% over $100,000 each, remote relatives 11% over $40,000, all others 15% over $25,000. Heirs under 22 are exempt."
+    }
+  ]
+}

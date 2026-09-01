@@ -1,0 +1,16 @@
+code,heir_class,exemption_usd,flat_rate,graduated_schedule,note
+PA,spouse,0,0.0,,
+PA,child_or_parent,0,0.045,,
+PA,sibling,0,0.12,,
+PA,other,0,0.15,,
+NJ,class_a_spouse_child_grandchild_parent,,0.0,,
+NJ,class_c_sibling_or_child_in_law,25000,,next 1075000 @ 0.11; next 300000 @ 0.13; next 300000 @ 0.14; remainder @ 0.16,
+NJ,class_d_other,0,,next 700000 @ 0.15; remainder @ 0.16,
+KY,class_a_close_family,,0.0,,
+KY,class_c_unrelated,500,,over 0: 0+0.06; over 10000: 600+0.08; over 20000: 1400+0.1; over 30000: 2400+0.12; over 45000: 4200+0.14; over 60000: 6300+0.16,
+NE,spouse,,0.0,,
+NE,close_relative,100000,0.01,,
+NE,remote_relative,40000,0.11,,
+NE,other,25000,0.15,,
+MD,close_family,,0.0,,
+MD,other,0,0.1,,Credited against the Maryland estate tax.
