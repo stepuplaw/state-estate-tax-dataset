@@ -23,7 +23,7 @@ import pathlib
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-REPO_ID = "stepuplaw/us-state-estate-inheritance-tax-2026"
+REPO_ID = "StepUpLaw/us-state-estate-inheritance-tax-2026"
 
 # Card first: on Hugging Face the README IS the dataset page, so it has to be
 # the real document rather than a stub pointing elsewhere.
