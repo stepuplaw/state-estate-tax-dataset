@@ -1,5 +1,5 @@
 {
-  "_comment": "Zenodo reads this file at release time and it OVERRIDES the metadata Zenodo would otherwise infer from GitHub. Two fields are load-bearing. upload_type must be 'dataset', because that is what makes Zenodo emit schema.org JSON-LD with @type Dataset, which is the form Google Dataset Search requires. And creators[].orcid is what turns the author from a bare name string into a resolvable @id in the DataCite record, which every downstream index then inherits. BEFORE TAGGING THE RELEASE: replace the placeholder ORCID below with the real iD from orcid.org/register, and make the same change in CITATION.cff. A DOI minted without it carries an unresolvable author permanently for that version.",
+  "_comment": "Zenodo reads this file at release time and it OVERRIDES the metadata Zenodo would otherwise infer from GitHub. upload_type must stay 'dataset', because that is what makes Zenodo emit schema.org JSON-LD with @type Dataset, the form Google Dataset Search requires. creators[].orcid is what turns the author into a resolvable @id in the DataCite record, which DataCite, OpenAIRE and OpenAlex all inherit.",
   "title": "US state estate and inheritance tax, 2026",
   "upload_type": "dataset",
   "description": "All 50 US states and the District of Columbia, with the 2026 estate or inheritance tax exemption, the full rate schedule, the statutory citation, and the special rules that break naive calculations. Twelve states plus DC levy an estate tax, five states levy an inheritance tax, Maryland levies both, and the remaining 34 jurisdictions are recorded explicitly as levying neither, with repeal years and mechanism where established. Includes the New York cliff, Oregon's whole-estate computation, Pennsylvania's absence of any exemption, Washington's mid-2026 split into two rate schedules, and Virginia's surviving postponed inheritance tax. Figures were read from each state's department of revenue or statute rather than from aggregators, and a verification harness recomputes every bracket state against an independent implementation.",
@@ -7,7 +7,7 @@
     {
       "name": "Klagge, Kevin D.",
       "affiliation": "Klagge Law, PLLC (StepUpLaw)",
-      "orcid": "0000-0000-0000-0000"
+      "orcid": "0009-0002-1385-8498"
     }
   ],
   "license": "cc-by-4.0",

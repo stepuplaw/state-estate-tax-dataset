@@ -6,10 +6,7 @@ authors:
   - family-names: Klagge
     given-names: Kevin D.
     affiliation: "Klagge Law, PLLC (StepUpLaw)"
-    # Replace with the real iD from orcid.org/register BEFORE tagging a release.
-    # Without it the DataCite record carries a bare name string that no index can
-    # resolve to a person, and that is baked into the DOI for that version.
-    orcid: "https://orcid.org/0000-0000-0000-0000"
+    orcid: "https://orcid.org/0009-0002-1385-8498"
 license: CC-BY-4.0
 url: "https://stepuplaw.com/data/state-estate-tax"
 repository-code: "https://github.com/stepuplaw/state-estate-tax-dataset"
