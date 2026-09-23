@@ -1,5 +1,7 @@
 # US state estate and inheritance tax, 2026
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22908697.svg)](https://doi.org/10.5281/zenodo.22908697)
+
 All 50 states and the District of Columbia, with the 2026 exemption, the full
 rate schedule, the statutory citation, and the special rules that break naive
 calculations. Twelve states plus the District of Columbia levy an estate tax,
@@ -144,3 +146,7 @@ statute before relying on it for a filing.
 Data is licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 Use it commercially, modify it, build products on it. Attribution keeps the
 corrections flowing back, which is how the data stays right.
+
+## Citation and versions
+
+Cite the concept DOI, which always resolves to the newest version: **https://doi.org/10.5281/zenodo.22908697**. Each release has its own DOI as well; the 2026-09-23 audited release is https://doi.org/10.5281/zenodo.22908698. The data is re-verified against each state's statute and revenue department every January and after each legislative session.
