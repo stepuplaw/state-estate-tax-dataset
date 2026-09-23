@@ -23,7 +23,7 @@
       ]
     },
     "OR": {
-      "applies_to": "the whole taxable estate, once it reaches $1,000,000",
+      "applies_to": "the whole taxable estate; rows start at $1,000,000 with a zero base, so the tax falls on the excess over $1,000,000",
       "rows": [
         [1000000, 0, 0.1],
         [1500000, 50000, 0.1025],
@@ -140,80 +140,101 @@
         "rate": 0.0
       },
       {
-        "class": "child_or_parent",
+        "class": "minor_child_from_parent",
         "exemption_usd": 0,
-        "rate": 0.045
+        "rate": 0.0,
+        "note": "Transfers to a child age 21 or younger from a natural parent, adoptive parent or stepparent, deaths on or after 2020-01-01."
+      },
+      {
+        "class": "parent_from_minor_child",
+        "exemption_usd": 0,
+        "rate": 0.0,
+        "note": "Transfers from the estate of a child age 21 or younger to a natural parent, adoptive parent or stepparent, since 2000-07-01."
+      },
+      {
+        "class": "lineal",
+        "exemption_usd": 0,
+        "rate": 0.045,
+        "note": "Grandparents, parents, children (incl. stepchildren), lineal descendants, and the unremarried surviving spouse of a child."
       },
       {
         "class": "sibling",
         "exemption_usd": 0,
-        "rate": 0.12
+        "rate": 0.12,
+        "note": "Whole and half siblings only; step-siblings are in the 15% class."
       },
       {
         "class": "other",
         "exemption_usd": 0,
-        "rate": 0.15
+        "rate": 0.15,
+        "note": "Everyone else, including nieces, nephews, in-laws and step-siblings."
       }
     ],
     "NJ": [
       {
         "class": "class_a_spouse_child_grandchild_parent",
         "exemption_usd": null,
-        "rate": 0.0
+        "rate": 0.0,
+        "note": "Also grandparents, great-grandchildren, stepchildren (not step-grandchildren), mutually acknowledged children, civil union partners and domestic partners."
       },
       {
         "class": "class_c_sibling_or_child_in_law",
         "exemption_usd": 25000,
         "graduated": [
-          [
-            1075000,
-            0.11
-          ],
-          [
-            300000,
-            0.13
-          ],
-          [
-            300000,
-            0.14
-          ],
-          [
-            null,
-            0.16
-          ]
+          [1075000, 0.11],
+          [300000, 0.13],
+          [300000, 0.14],
+          [null, 0.16]
         ]
       },
       {
         "class": "class_d_other",
         "exemption_usd": 0,
         "graduated": [
-          [
-            700000,
-            0.15
-          ],
-          [
-            null,
-            0.16
-          ]
+          [700000, 0.15],
+          [null, 0.16]
         ]
+      },
+      {
+        "class": "class_e_charitable",
+        "exemption_usd": null,
+        "rate": 0.0,
+        "note": "Charitable, religious, educational and medical institutions and the State."
       }
     ],
     "KY": [
       {
         "class": "class_a_close_family",
         "exemption_usd": null,
-        "rate": 0.0
+        "rate": 0.0,
+        "note": "Spouse, parents, children (incl. stepchildren and children adopted in infancy), grandchildren, siblings (whole or half), and from 2026-01-01 nieces and nephews (whole or half blood) under 2026 Ky. Acts ch. 198 (HB 869) §§40, 68."
+      },
+      {
+        "class": "class_b",
+        "exemption_usd": 1000,
+        "note": "Sons- and daughters-in-law, aunts, uncles, great-grandchildren. Rows are on the gross distributive share; the $1,000 exemption is built in (KY DOR Guide 92F101: do not deduct the exemption first).",
+        "rows": [
+          [1000, 0, 0.04],
+          [10000, 360, 0.05],
+          [20000, 860, 0.06],
+          [30000, 1460, 0.08],
+          [45000, 2660, 0.1],
+          [60000, 4160, 0.12],
+          [100000, 8960, 0.14],
+          [200000, 22960, 0.16]
+        ]
       },
       {
         "class": "class_c_unrelated",
         "exemption_usd": 500,
+        "note": "Everyone not in Class A or B, including nieces and nephews by marriage and great-nieces and great-nephews. Rows are on the gross distributive share with the $500 exemption built in.",
         "rows": [
-          [0, 0, 0.06],
-          [10000, 600, 0.08],
-          [20000, 1400, 0.1],
-          [30000, 2400, 0.12],
-          [45000, 4200, 0.14],
-          [60000, 6300, 0.16]
+          [500, 0, 0.06],
+          [10000, 570, 0.08],
+          [20000, 1370, 0.1],
+          [30000, 2370, 0.12],
+          [45000, 4170, 0.14],
+          [60000, 6270, 0.16]
         ]
       }
     ],
@@ -226,12 +247,14 @@
       {
         "class": "close_relative",
         "exemption_usd": 100000,
-        "rate": 0.01
+        "rate": 0.01,
+        "note": "Siblings, persons the decedent stood in the acknowledged relation of a parent to for 10 or more years, and spouses of anyone in the class. Beneficiaries under 22 are exempt in every class."
       },
       {
         "class": "remote_relative",
         "exemption_usd": 40000,
-        "rate": 0.11
+        "rate": 0.11,
+        "note": "Aunts, uncles, nieces, nephews, their descendants and their spouses."
       },
       {
         "class": "other",
@@ -249,7 +272,7 @@
         "class": "other",
         "exemption_usd": 0,
         "rate": 0.1,
-        "note": "Credited against the Maryland estate tax."
+        "note": "Inheritance tax paid is credited against the Maryland estate tax (one way)."
       }
     ]
   }

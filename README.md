@@ -49,19 +49,20 @@ Bracket rows are `[bracket_floor, base_tax, marginal_rate]` and compose as:
 
 using the highest floor at or below `amount`. What `amount` means differs by
 state and is stated per state in `applies_to`. Most states apply the table to
-the estate net of the exemption. Oregon and New York apply it to the whole
-estate once the threshold is crossed, which is a materially different thing.
+the estate net of the exemption. New York applies it to the whole estate once
+the 105% cliff is crossed, which is a materially different thing.
 
 ## The traps, which are the point
 
 - **New York is a cliff.** Above 105% of the exemption ($7,717,500 in 2026) the
   exemption vanishes entirely and the whole estate is taxed from the first
   dollar. A small overage can cost six figures.
-- **Oregon taxes the whole estate**, not just the excess, once you reach
-  $1,000,000.
+- **Oregon starts at $1,000,000**, the lowest threshold in the country, and
+  files on a gross-asset test with a 12-month due date.
 - **Pennsylvania has no exemption at all.** Tax runs from the first dollar,
   and the rate depends on who inherits rather than how much.
-- **Maryland levies both taxes** and credits them against each other.
+- **Maryland levies both taxes.** Inheritance tax paid reduces the estate tax,
+  not the other way round.
 - **Washington changed mid-year.** Deaths on or after 2026-07-01 use a
   $3,000,000 exclusion and rates to 20% under ESB 6347. Deaths in the first
   half of 2026 use $3,076,000 and rates to 35%.
